@@ -28,6 +28,7 @@ void daemon_run()
     else if (pid > 0) {
         exit(0);
     }
+	//
     //之前parent和child运行在同一个session里,parent是会话（session）的领头进程,
     //parent进程作为会话的领头进程，如果exit结束执行的话，那么子进程会成为孤儿进程，并被init收养。
     //执行setsid()之后,child将重新获得一个新的会话(session)id。
